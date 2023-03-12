@@ -15,5 +15,5 @@ if __name__== "__main__":
   print("Status Code:" + str(status_code))
   print(response.text)
   if status_code == 200:
-    sys.exit(1)
+    sys.exit(0)
   sys.exit(1)    
