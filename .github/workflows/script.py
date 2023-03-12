@@ -1,2 +1,16 @@
+import requests
+import sys
+
 if __name__== "__main__":
-  print("Hello World!!!!TEST")
+  try:
+    response = requests.get("https://api.github.com")
+  except requests.HTTPError as http_err:
+    print(f'HTTP error occurred: {http_err}')
+    sys.exit(1)
+  except Exception as err:
+    print(f'Other error occurred: {err}')  # Python 3.6
+    sys.exit(1) 
+  status_code = response.status_code
+  if status_code == 200:
+    sys.exit(0)
+  sys.exit(1)    
