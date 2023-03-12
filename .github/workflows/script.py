@@ -11,6 +11,9 @@ if __name__== "__main__":
     print(f'Other error occurred: {err}')  # Python 3.6
     sys.exit(1) 
   status_code = response.status_code
+  print("Request sent")
+  print("Status Code:" + str(status_code))
+  print(response.text)
   if status_code == 200:
     sys.exit(0)
   sys.exit(1)    
