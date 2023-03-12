@@ -3,7 +3,7 @@ name: On PR Run
 on: pull_request
 
 env:
-  DEVOPS_DIR: .github/workflows
+  WORKFLOW_DIR: .github/workflows
 
 jobs:
   python-script:
@@ -28,5 +28,5 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       
     - name: Check false-positive
-      run: python ${{ env.DEVOPS_DIR }}/script.py
+      run: python ${{ env.WORKFLOW_DIR }}/script.py
       shell: sh
