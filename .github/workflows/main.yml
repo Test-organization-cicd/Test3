@@ -15,7 +15,6 @@ jobs:
       with:
         repository: Test-organization-cicd/Test3
         token: ${{ secrets.GITHUB_TOKEN }}
-        path: ${{ env.DEVOPS_DIR }}
 
     - name: Hello World
       run: python ${{ env.DEVOPS_DIR }}/script.py
