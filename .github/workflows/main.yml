@@ -3,7 +3,7 @@ name: On Push Run
 on: pull_request
 
 env:
-  DEVOPS_DIR: Test3/.github/workflows
+  DEVOPS_DIR: .github/workflows
 
 jobs:
   python-script:
